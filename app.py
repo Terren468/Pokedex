@@ -3,8 +3,16 @@ import json
 pokedex = open("./pokedex.json", encoding="utf8")
 ## create variable "data" that represents the enitre pokedex list
 data = json.load(pokedex)
-x= input("Give me the pokemon ID that you would like to see")
-print(data[x+1])
+
+def id_finder() :
+    for pokemon in data:
+        Language = input("Language: english, chinese, japanese").lower 
+        Pokemon = int (input("Give me the pokemon ID that you would like to see"))
+    if Language == "english": 
+     print([pokemon]data['english']['name'] )
+        
+
+print(data["name"])
 
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
 
