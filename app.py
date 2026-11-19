@@ -20,8 +20,10 @@ pokemon_printer()
  
 def pokemon_searcher():
         types = input("What types of pokemon do you want to find? : ")
+
+
         for pokemon in data:
-                if types in pokemon:
+                if types in pokemon[type]:
                         print (pokemon['name']['english'])
 pokemon_searcher()
 
