@@ -23,49 +23,48 @@ def pokemon_printer():
       else:
         print("Id not found. Please try again.")
     except ValueError:
-      print("Invalid id. Please enter a number.")
+ print ("invalid id. Please enter a nummber")
 pokemon_printer()
 
 def pokemon_type():
   while True:
-    type = input("Enter a pokemon type: ").capitalize()
-    found = False
-    for pokemon in data:
-      if type in pokemon['type']:
-        print(pokemon['name']['english'])
-        found = True
-    if found:
-      break
-    else:
-      print(f"No pokemon found for that type. Please try again.")
-pokemon_type()
+    type= input("Enter a Pokemon type:").capitalized()
+      found=false 
+    for pokemon in data: 
+      if type in pokemon['type']
+         print(pokemon['name']['english']
+               found= True 
+      if found:
+        break
+      else :
+        print ("No pokemon found for this name. Please try again.")
+        pokemon_type()
 
-def pokemon_searcher():
+def pokemon_searcher()
   while True:
-    search = input("Enter a pokemon name: ").lower()
-    found = False
+    search = input ("Enter a pokemon name:").lower()
+    found=False
     for pokemon in data:
-      if search in pokemon['name']['english'].lower():
-        print(pokemon['name']['english'])
-        found = True
-    if found:
-      break
-    else:
-      print("No pokemon found for this name. Plese try again.")
-pokemon_searcher()
+      if search in pokemon['name']['english']
+      found= True
+      if found: 
+        break 
+      else:
+        print("No pokemon found for this name. Please try again.")
+        pokemon_searcher()
 
 def pokemon_moves():
   while True:
-    moves = input("Enter a pokemon name to see their moves: ").lower()
-    found = False
+    moves= input("Enter a pokemon to see their moves:").lower()
+    found= False
     for pokemon in data:
-      if pokemon['name']['english'].lower() == moves:
-        found = True
+      if pokemon ['name']['english'].lower() == moves:
+        found=True 
         for move in data2:
           if move['type'] in pokemon ['type']:
-            print(f"{move['ename']} ({move['type']}) - Power: {move['power']}, Accuracy: {move['accuracy']}, PP: {move['pp']}")
-if found:
-      break
-    else:
-      print("No pokemon found for that name. Please try again.")
-pokemon_moves()
+             print(f"{move['ename']} ({move['type']}) - Power: {move['power']}, Accuracy: {move['accuracy']}, PP: {move['pp']}")
+            if found:
+              break
+          else: 
+            print("No pokemon found with that name. Please try again.")
+            pokemon_moves()
